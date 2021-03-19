@@ -21,9 +21,9 @@ router.post('/add-product', [
         .isLength({ min: 3 })
         .trim()
         .withMessage('Please enter a valid title of at least 3 characters!'),
-    body('imageUrl')
-        .isURL()
-        .withMessage('Please enter a valid URL'),
+    // body('imageUrl')
+    //     .isURL()
+    //     .withMessage('Please enter a valid URL'),
     body('price')
         .isFloat()
         .withMessage('Please enter a valid price with decimal values!'),
@@ -41,9 +41,6 @@ router.post('/edit-product', [
         .isLength({ min: 3 })
         .trim()
         .withMessage('Please enter a valid title of at least 3 characters!'),
-    body('imageUrl')
-        .isURL()
-        .withMessage('Please enter a valid URL'),
     body('price')
         .isFloat()
         .withMessage('Please enter a valid price with decimal values!'),
